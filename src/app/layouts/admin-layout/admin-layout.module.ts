@@ -20,6 +20,7 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import { DefectDetailsComponent } from 'app/defect-details/defect-details.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import {
     IconsComponent,
     NotificationsComponent,
     BuglistComponent,
+    DefectDetailsComponent
   ]
 })
 

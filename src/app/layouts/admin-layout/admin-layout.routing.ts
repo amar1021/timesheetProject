@@ -7,6 +7,7 @@ import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { BuglistComponent } from '../../buglist/buglist.component';
+import { DefectDetailsComponent } from 'app/defect-details/defect-details.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -54,8 +55,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
+    { path: 'defect/:id',     component: DefectDetailsComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'defect-list',  component: BuglistComponent },
+    { path: '',redirectTo: 'dashboard', pathMatch: 'full' }
 ];

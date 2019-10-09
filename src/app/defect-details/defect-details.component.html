@@ -1,0 +1,452 @@
+<div class="main-content">
+    <div class="row">
+        <div class="card">
+            <div class="card-header card-header-tabs card-header-danger">
+                <h4 class="card-title ">{{defect_no.id}} : Payment Initiation-submit for approval is not working _delete
+                    entity</h4>
+                <!-- <p class="card-category"> {{defect_no.id}}</p> -->
+                <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                        <span class="nav-tabs-title"></span>
+                        <ul class="nav nav-tabs" data-tabs="tabs">
+                            <li class="nav-item" (click)="edit()">
+                                <a mat-button class="nav-link" href="#profile" data-toggle="tab">
+                                    <i class="material-icons">edit</i> Edit
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a mat-button class="nav-link" href="#messages" data-toggle="tab">
+                                    <i class="material-icons">comment</i> Comment
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a mat-button class="nav-link" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">rowing</i> Workflow
+                                    <div class="ripple-container"></div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">In Analysis</a>
+                                    <a class="dropdown-item" href="#">In Fix</a>
+                                    <a class="dropdown-item" href="#">Ready to Deploy</a>
+                                    <a class="dropdown-item" href="#">Dev team to Test</a>
+                                    <a class="dropdown-item" href="#">Test team to Test</a>
+                                </div>
+                            </li>
+                            <li class="nav-item" (click)="logTime()">
+                                <a mat-button class="nav-link" href="#settings" data-toggle="tab">
+                                    <i class="material-icons">access_time</i> Log Time
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a mat-button class="nav-link" href="#settings" data-toggle="tab">
+                                    <i class="material-icons">import_export</i> Export
+                                    <div class="ripple-container"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body ">
+                <!-- <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                        <select>
+                            <option value="0">Select car:</option>
+                            <option value="1">Audi</option>
+                            <option value="2">BMW</option>
+                            <option value="3">Citroen</option>
+                            <option value="4">Ford</option>
+                            <option value="5">Honda</option>
+                            <option value="6">Jaguar</option>
+                            <option value="7">Land Rover</option>
+                            <option value="8">Mercedes</option>
+                            <option value="9">Mini</option>
+                            <option value="10">Nissan</option>
+                            <option value="11">Toyota</option>
+                            <option value="12">Volvo</option>
+                        </select>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">details</i>
+                                </div>
+                                <h3 class="card-title">Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Type:</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Improvement</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Status:</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p><span style="font-size: 1em" class="badge badge-success">Done</span></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label>Priority:</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Minor</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Resolution:</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p>Unresolved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">people</i>
+                                </div>
+                                <h3 class="card-title">People</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Assignee:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Amar Thakare</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Reporter:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Amar Thakare</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">date_range</i>
+                                </div>
+                                <h3 class="card-title">Dates</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Due:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>23/05/2019</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Created:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>22/May/19 9:16 AM</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Updated:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>06/Jun/19 2:48 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">av_timer</i>
+                                </div><h3 class="card-title">Time Tracking</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Estimated:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>16 h</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Remaining:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>12 h</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-5">
+                                            <label>Logged:</label>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <p>4 h</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">attach_file</i>
+                                </div><h3 class="card-title">Attachment</h3>
+                            </div>
+                            <div class="card-body">
+                                <!-- <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Assignee:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Amar Thakare</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <label>Reporter:</label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p>Amar Thakare</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card card-stats">
+                            <div class="card-header card-header-warning card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">description</i>
+                                </div>
+                                <h3 class="card-title">Description</h3>
+                            </div>
+                            <div class="card-body">
+                                    <div class="row">
+                                            <p style="text-align: justify">
+                                                    Steps to reproduce:
+
+                                                    1.Login to BILGUI and navigate to payment Profiles under AMD
+                                                    
+                                                    2.click on investigation mode and search for a profile.
+                                                    
+                                                    3.select the profile and click on actions
+                                                    
+                                                    4.click on delete entity
+                                                    
+                                                    5.click on submit for approval
+                                                    
+                                                    Expected result: Submit for approval should work
+                                                    
+                                                    Actual result: Submit for approval is not working.
+                                                    
+                                                     
+                                                    
+                                                     
+                                                    
+                                                    Note:
+                                                    
+                                                    sometimes it is working but most of the time we are getting this console error
+                                            </p>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Edit Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--             <div class="modal-header">
+          <h4 class="modal-title">Defect Details</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div> -->
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Defect Details</h4>
+                        <!-- <p class="card-category">Complete your profile</p> -->
+                    </div>
+                    <div class="card-body">
+                        <!-- <form> -->
+                        <div class="row">
+                            <div class="col-md-5">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Company (disabled)" disabled>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Username">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email address" type="email">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Fist Name" type="text">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Last Name" type="text">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Adress" type="text">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="City" type="text">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Country" type="text">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Postal Code" type="text">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <!-- <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update
+                              Profile</button> -->
+                        <div class="clearfix"></div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <!-- <button class="btn btn-link mat-raised-button" mat-raised-button="" type="button"><span
+                      class="mat-button-wrapper">Nice Button</span>
+                  <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+              </button> -->
+                <button class="btn btn-danger btn-link mat-raised-button" data-dismiss="modal" mat-raised-button=""
+                    type="button"><span class="mat-button-wrapper">Update</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button>
+                <button class="btn btn-danger btn-link mat-raised-button" data-dismiss="modal" mat-raised-button=""
+                    type="button"><span class="mat-button-wrapper">Close</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Log Houes Modal -->
+<div id="logTimeModel" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!--             <div class="modal-header">
+            <h4 class="modal-title">Defect Details</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> -->
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Log Time</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Hours" type="text">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Minute" type="text">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Date" type="date">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11">
+                                <mat-form-field class="example-full-width">
+                                    <textarea matInput placeholder="Comment" class="form-control" rows="5"
+                                        id="comment"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <!-- <button class="btn btn-link mat-raised-button" mat-raised-button="" type="button"><span
+                        class="mat-button-wrapper">Nice Button</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button> -->
+                <button class="btn btn-danger btn-link mat-raised-button" data-dismiss="modal" mat-raised-button=""
+                    type="button"><span class="mat-button-wrapper">Update</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button>
+                <button class="btn btn-danger btn-link mat-raised-button" data-dismiss="modal" mat-raised-button=""
+                    type="button"><span class="mat-button-wrapper">Close</span>
+                    <div class="mat-button-ripple mat-ripple" matripple=""></div>
+                    <div class="mat-button-focus-overlay"></div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -3,6 +3,8 @@ import { AgGridNg2 } from 'ag-grid-angular';
 import { Defect } from 'app/common/pojo/defect';
 import { DefectService } from 'app/common/services/defect/defect.service';
 import { PartialMatchFilter } from 'app/common/filter/PartialMatchFilter';
+import { Router } from "@angular/router";
+
 
 declare var $: any;
 @Component({
@@ -26,7 +28,7 @@ private gridApi;
       onRowDoubleClicked: 'doSomething(event)'
   };
 
-  constructor(private defectService:DefectService) {
+  constructor(private defectService:DefectService, private router:Router) {
     this.frameworkComponents = { partialMatchFilter: PartialMatchFilter };
    }
   columnDefs = [
@@ -45,15 +47,9 @@ private gridApi;
 }
 onCellDoubleClicked(event: any) { 
     console.log(event.data);
-    $("#myModal").modal('show');
-  /*   var selectedRows = this.gridApi.getSelectedRows();
-    var selectedRowsString = "";
-    selectedRows.forEach(function(selectedRow, index) {
-      if (index !== 0) {
-        selectedRowsString += ", ";
-      }
-      selectedRowsString += selectedRow.athlete;
-    }); */
+    if(event.data.defect_id != undefined){
+      this.router.navigate(['defect',event.data.defect_id]);
+    }
    }
 
   ngOnInit() {
